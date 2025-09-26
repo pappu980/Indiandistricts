@@ -1,1 +1,265 @@
-
+{
+	"districts": [
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "AS",
+			"district": "Alluri Sitharama Raju",
+			"headquarters": "Paderu",
+			"population": 954000,
+			"area": 12251,
+			"density": 77
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "AK",
+			"district": "Anakapalli",
+			"headquarters": "Anakapalli",
+			"population": 1727000,
+			"area": 4292,
+			"density": 402
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "AN",
+			"district": "Ananthapuramu",
+			"headquarters": "Ananthapuramu",
+			"population": 2241100,
+			"area": 10205,
+			"density": 219
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "AM",
+			"district": "Annamayya",
+			"headquarters": "Rayachoti",
+			"population": 1697300,
+			"area": 7954,
+			"density": 213
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "BP",
+			"district": "Bapatla",
+			"headquarters": "Bapatla",
+			"population": 1587000,
+			"area": 3829,
+			"density": 414
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "CH",
+			"district": "Chittoor",
+			"headquarters": "Chittoor",
+			"population": 1873000,
+			"area": 6855,
+			"density": 273
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "KN",
+			"district": "Dr. B.R. Ambedkar Konaseema",
+			"headquarters": "Amalapuram",
+			"population": 1719100,
+			"area": 2083,
+			"density": 825
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "EG",
+			"district": "East Godavari",
+			"headquarters": "Rajamahendravaram",
+			"population": 1832300,
+			"area": 2561,
+			"density": 715
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "EL",
+			"district": "Eluru",
+			"headquarters": "Eluru",
+			"population": 2071700,
+			"area": 6679,
+			"density": 310
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "GU",
+			"district": "Guntur",
+			"headquarters": "Guntur",
+			"population": 2091000,
+			"area": 2443,
+			"density": 855
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "KK",
+			"district": "Kakinada",
+			"headquarters": "Kakinada",
+			"population": 2092300,
+			"area": 3019,
+			"density": 693
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "KR",
+			"district": "Krishna",
+			"headquarters": "Machilipatnam",
+			"population": 1735000,
+			"area": 3775,
+			"density": 459
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "KU",
+			"district": "Kurnool",
+			"headquarters": "Kurnool",
+			"population": 2271700,
+			"area": 7980,
+			"density": 284
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "NN",
+			"district": "Nandyal",
+			"headquarters": "Nandyal",
+			"population": 1781800,
+			"area": 9682,
+			"density": 184
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "NT",
+			"district": "NTR",
+			"headquarters": "Vijayawada",
+			"population": 2218000,
+			"area": 3316,
+			"density": 668
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "PL",
+			"district": "Palnadu",
+			"headquarters": "Narasaraopet",
+			"population": 2042000,
+			"area": 7298,
+			"density": 279
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "PM",
+			"district": "Parvathipuram Manyam",
+			"headquarters": "Parvathipuram",
+			"population": 925300,
+			"area": 3659,
+			"density": 252
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "PR",
+			"district": "Prakasam",
+			"headquarters": "Ongole",
+			"population": 2288000,
+			"area": 14322,
+			"density": 160
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "SR",
+			"district": "Srikakulam",
+			"headquarters": "Srikakulam",
+			"population": 2191471,
+			"area": 4591,
+			"density": 477
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "NE",
+			"district": "Sri Potti Sriramulu Nellore",
+			"headquarters": "Nellore",
+			"population": 2469700,
+			"area": 10441,
+			"density": 236
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "SS",
+			"district": "Sri Sathya Sai",
+			"headquarters": "Puttaparthi",
+			"population": 1840000,
+			"area": 8925,
+			"density": 206
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "TR",
+			"district": "Tirupati",
+			"headquarters": "Tirupati",
+			"population": 2197000,
+			"area": 8231,
+			"density": 241
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "VS",
+			"district": "Visakhapatnam",
+			"headquarters": "Visakhapatnam",
+			"population": 1959500,
+			"area": 1048,
+			"density": 1869
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "VZ",
+			"district": "Vizianagaram",
+			"headquarters": "Vizianagaram",
+			"population": 1930800,
+			"area": 4122,
+			"density": 468
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "WG",
+			"district": "West Godavari",
+			"headquarters": "Bhimavaram",
+			"population": 1780000,
+			"area": 2178,
+			"density": 817
+		},
+		{
+			"state": "Andhra Pradesh",
+			"stateCode": "AP",
+			"districtCode": "CU",
+			"district": "YSR",
+			"headquarters": "Kadapa",
+			"population": 2060700,
+			"area": 11228,
+			"density": 183
+		}
+		// ... (and so on for all other districts in your provided data)
+	]
+    }
