@@ -1,31 +1,117 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>[District Name] | Indian Districts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&di>  <style>
-    body { font-family: 'Inter', Arial, sans-serif; margin:0; background:#f7fafc; color>
-    header { background: #1976d2; color:#fff; padding:1.7rem 1rem 1.2rem 1rem; text-ali>
-    nav { display: flex; justify-content: center; gap: 2rem; padding: 1rem 0; backgroun>
-    nav a { color: #1976d2; text-decoration: none; font-weight: 700; font-size: 1rem; p>
-    nav a:hover { background: #e3f2fd; color: #0d47a1; }
-    .container { max-width: 800px; margin:2rem auto; background:#fff; border-radius: 12>
-    .district-header { display: flex; flex-direction: column; align-items: center; marg>
-    .district-header h1 { margin:0; color:#1976d2; font-size:2.1rem;}                       .district-header .meta { color:#555; margin-top:0.5rem;}
-    .info-cards { display: flex; flex-wrap: wrap; gap:1.5rem; margin:2rem 0;}
-    .info-card {                                                                              flex:1 1 220px;
-      background:#e3f2fd; border-radius:8px; padding:1.3rem;
-      color:#1976d2; font-weight:600; font-size:1.08rem; text-align:center;                   box-shadow: 0 1px 8px rgba(25,118,210,0.07);
-    }                                                                                       .section { margin:2.5rem 0 1.2rem 0;}
-    .map-section { text-align:center; }
-    .map-placeholder { background: #bbdefb; color: #1976d2; border-radius: 8px; height:>
-    @media(max-width:650px){ .container{padding:1rem;} .info-cards{flex-direction:colum>  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      background: #f7fafc;
+      color: #222;
+    }
+    header {
+      background: #1976d2;
+      color: #fff;
+      padding: 1.7rem 1rem 1.2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      background: #fff;
+      border-bottom: 1px solid #e3f2fd;
+    }
+    nav a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      background: #e3f2fd;
+      color: #0d47a1;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(25,118,210,0.06);
+      padding: 2rem;
+    }
+    .district-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .district-header h1 {
+      margin: 0;
+      color: #1976d2;
+      font-size: 2.1rem;
+    }
+    .district-header .meta {
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    .info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .info-card {
+      flex: 1 1 220px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 1.3rem;
+      color: #1976d2;
+      font-weight: 600;
+      font-size: 1.08rem;
+      text-align: center;
+      box-shadow: 0 1px 8px rgba(25,118,210,0.07);
+    }
+    .section {
+      margin: 2.5rem 0 1.2rem 0;
+    }
+    .map-section {
+      text-align: center;
+    }
+    .map-placeholder {
+      background: #bbdefb;
+      color: #1976d2;
+      border-radius: 8px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 650px) {
+      .container {
+        padding: 1rem;
+      }
+      .info-cards {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>                                                                                  <h1>[District Name]</h1>
-    <div class="meta">State: [State Name] | Population: 1,234,567 | Area: 2,345 km²</di>  </header>
+  <header>
+    <h1>[District Name]</h1>
+    <div class="meta">State: [State Name] | Population: 1,234,567 | Area: 2,345 km²</div>
+  </header>
   <nav>
     <a href="index.html">Home</a>
     <a href="states.html">Browse by State</a>
@@ -34,6 +120,9 @@
     <a href="contact.html">Contact</a>
   </nav>
   <div class="container">
+    <div class="district-header" style="display:none;">
+      <!-- Optional: Could show header info here if needed -->
+    </div>
     <div class="info-cards">
       <div class="info-card">Population<br><strong>1,234,567</strong></div>
       <div class="info-card">Area<br><strong>2,345 km²</strong></div>
