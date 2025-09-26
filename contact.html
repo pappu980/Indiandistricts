@@ -1,27 +1,108 @@
-                  contact.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">                                                      <title>Contact | Indian Districts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inte>
+  <meta charset="UTF-8">
+  <title>Contact | Indian Districts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   <style>
-    body { font-family: 'Inter', Arial, sans-serif; background:#f7fafc; mar>
-    header { background:#1976d2; color:#fff; padding:2rem 1rem 1.2rem 1rem;>
-    nav { display: flex; justify-content: center; gap: 2rem; padding: 1rem >
-    nav a { color: #1976d2; text-decoration: none; font-weight: 700; font-s>
-    nav a:hover { background: #e3f2fd; color: #0d47a1; }                        .container { max-width:500px; margin:2rem auto; background:#fff; border>
-    label{display:block; margin-bottom:0.5rem; color:#1976d2;}
-    input,textarea{width:100%; padding:0.7rem; border-radius:6px; border:1p>    button{background:#1976d2; color:#fff; border:none; padding:0.8rem 2rem>
-    button:hover{background:#0d47a1;}
-    @media(max-width:650px){.container{padding:1rem;}}                        </style>
-</head>                                                                     <body>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f7fafc;
+      margin: 0;
+    }
+    header {
+      background: #1976d2;
+      color: #fff;
+      padding: 2rem 1rem 1.2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      background: #e3f2fd;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      background: #1976d2;
+      color: #fff;
+    }
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #1976d2;
+      font-weight: 600;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #bdbdbd;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    button {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #0d47a1;
+    }
+    @media (max-width: 650px) {
+      .container {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      nav {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
   <header><h1>Contact Us</h1></header>
   <nav>
-    <a href="index.html">Home</a>                                               <a href="states.html">Browse by State</a>
-    <a href="statistics.html">Statistics</a>                                    <a href="about.html">About</a>                                              <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="states.html">Browse by State</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
-  <div class="container">                                                       <form>                                                                        <label for="name">Name</label>
-      <input id="name" name="name" required>                                      <label for="email">Email</label>
+  <div class="container">
+    <form>
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+      <label for="email">Email</label>
       <input id="email" name="email" type="email" required>
       <label for="msg">Message</label>
       <textarea id="msg" name="msg" rows="5" required></textarea>
@@ -30,4 +111,3 @@
   </div>
 </body>
 </html>
-
