@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>                                                                                           <html lang="en">
+<head>                                                                                                      <meta charset="UTF-8">
+  <title>Browse by State | Indian Districts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; margin:0; background:#f7fafc; color:#1a237e; }
+    header { background: #1976d2; color: #fff; padding: 1.7rem 1rem 1.2rem 1rem; text-align:center;}
+    h1 { margin:0 0 0.4rem 0; }
+    nav { display: flex; justify-content: center; gap: 2rem; padding: 1rem 0; background: #fff; }
+    nav a { color: #1976d2; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 0.3rem 1re>
+    nav a:hover { background: #e3f2fd; color: #0d47a1; }
+    .container { max-width:900px; margin:2rem auto; background:#fff; border-radius: 12px; box-shadow: 0 2>
+    .state-search { display:flex; justify-content:center; margin-bottom:1.7rem; }
+    .state-search input { padding:0.8rem 1rem; border:1px solid #bbb; border-radius:6px; width:60%; font->
+    .states-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.4re>
+    .state-card {
+      background: #e3f2fd; border-radius: 9px; padding: 1.3rem 0.7rem;
+      text-align: center; font-weight: 600; font-size: 1.08rem; color: #1976d2;
+      text-decoration: none; box-shadow: 0 1px 8px rgba(25,118,210,0.06);
+      transition: background 0.18s, box-shadow 0.17s;
+      cursor: pointer;
+    }
+    .state-card:hover { background: #bbdefb; box-shadow: 0 2px 18px rgba(25,118,210,0.10);}
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      .states-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Browse by State</h1>
+    <p>Click a state to explore its districts and data.</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="states.html">Browse by State</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <div class="state-search">
+      <input type="text" placeholder="Search for a state..." id="stateSearch" onkeyup="filterStates()">
+    </div>
+    <div class="states-grid" id="statesGrid">
+      <a href="#" class="state-card">Andhra Pradesh</a>
+      <a href="#" class="state-card">Arunachal Pradesh</a>
+      <a href="#" class="state-card">Assam</a>
+      <a href="#" class="state-card">Bihar</a>
+      <a href="#" class="state-card">Chhattisgarh</a>
+      <a href="#" class="state-card">Goa</a>
+      <a href="#" class="state-card">Gujarat</a>
+      <a href="#" class="state-card">Haryana</a>
+      <a href="#" class="state-card">Himachal Pradesh</a>
+      <a href="#" class="state-card">Jharkhand</a>
+      <a href="#" class="state-card">Karnataka</a>
+      <a href="#" class="state-card">Kerala</a>
+      <a href="#" class="state-card">Madhya Pradesh</a>
+      <a href="#" class="state-card">Maharashtra</a>
+      <a href="#" class="state-card">Manipur</a>
+      <a href="#" class="state-card">Meghalaya</a>
+      <a href="#" class="state-card">Mizoram</a>
+      <a href="#" class="state-card">Nagaland</a>
+      <a href="#" class="state-card">Odisha</a>
+      <a href="#" class="state-card">Punjab</a>
+      <a href="#" class="state-card">Rajasthan</a>
+      <a href="#" class="state-card">Sikkim</a>
+      <a href="#" class="state-card">Tamil Nadu</a>
+      <a href="#" class="state-card">Telangana</a>
+      <a href="#" class="state-card">Tripura</a>
+      <a href="#" class="state-card">Uttar Pradesh</a>
+      <a href="#" class="state-card">Uttarakhand</a>
+      <a href="#" class="state-card">West Bengal</a>
+      <a href="#" class="state-card">Andaman & Nicobar</a>
+      <a href="#" class="state-card">Chandigarh</a>
+      <a href="#" class="state-card">Delhi</a>
+      <a href="#" class="state-card">Jammu & Kashmir</a>
+      <a href="#" class="state-card">Ladakh</a>
+      <a href="#" class="state-card">Lakshadweep</a>
+      <a href="#" class="state-card">Puducherry</a>
+    </div>
+  </div>
+  <script>
+    function filterStates() {
+      const input = document.getElementById('stateSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.states-grid .state-card');
+      cards.forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
