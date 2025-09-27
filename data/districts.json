@@ -1,3 +1,4 @@
+
 {
 	"districts": [
 		{
@@ -254,12 +255,11 @@
 			"state": "Andhra Pradesh",
 			"stateCode": "AP",
 			"districtCode": "CU",
-			"district": "YSR",
+			"district":. "YSR",
 			"headquarters": "Kadapa",
 			"population": 2060700,
 			"area": 11228,
 			"density": 183
 		}
-		// ... (and so on for all other districts in your provided data)
 	]
-    }
+}

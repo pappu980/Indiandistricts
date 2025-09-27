@@ -18,7 +18,7 @@ function createStateCard(state) {
   const col = document.createElement('div');
   col.className = 'col';
   const link = document.createElement('a');
-  link.href = `states.html?state=${encodeURIComponent(state.stateCode)}`;
+  link.href = `district.html?state=${encodeURIComponent(state.stateCode)}`;
   link.className = 'card bg-blue-100 rounded-lg shadow p-3 text-center text-blue-700 fw-bold';
   link.itemscope = true;
   link.itemtype = 'https://schema.org/Place';
@@ -52,9 +52,12 @@ if (document.getElementById('stateCards')) {
 
   // Search with autosuggest (districts & states)
   let allNames = [];
-  fetchData('data/districts.json').then(data => {
-    if (!data) return;
-    allNames = [...new Set(data.districts.map(d => d.district).concat(data.districts.map(d => d.state)))];
+  Promise.all([
+    fetchData('data/districts.json'),
+    fetchData('data/states.json')
+  ]).then(([districts, states]) => {
+    if (!districts || !states) return;
+    allNames = [...new Set(districts.districts.map(d => d.district).concat(states.states.map(s => s.state)))];
   });
 
   document.getElementById('searchBox').addEventListener('input', function() {
@@ -97,13 +100,45 @@ if (document.getElementById('statesGrid')) {
 if (location.pathname.endsWith('district.html')) {
   const params = new URLSearchParams(location.search);
   const districtName = params.get('name');
-  fetchData('data/districts.json').then(data => {
-    if (!data) return;
-    const d = data.districts.find(x => x.district.toLowerCase() === districtName?.toLowerCase());
-    if (!d) {
-        document.getElementById('districtHeader').innerHTML = `<h2 class="fw-bold text-red-700">District not found</h2>`;
-        return;
-    }
+  const stateCode = params.get('state'); // Added to get state code from URL
+
+  if (districtName) {
+    fetchData('data/districts.json').then(data => {
+      if (!data) return;
+      const d = data.districts.find(x => x.district.toLowerCase() === districtName?.toLowerCase());
+      if (!d) {
+          document.getElementById('districtHeader').innerHTML = `<h2 class="fw-bold text-red-700">District not found</h2>`;
+          return;
+      }
+      renderDistrictInfo(d);
+    });
+  } else if (stateCode) {
+    Promise.all([
+        fetchData('data/districts.json'),
+        fetchData('data/states.json')
+    ]).then(([districts, states]) => {
+        if (!districts || !states) return;
+        const state = states.states.find(s => s.stateCode === stateCode);
+        if (!state) return;
+        const stateDistricts = districts.districts.filter(d => d.stateCode === stateCode);
+        document.getElementById('districtHeader').innerHTML = `<h2 class="fw-bold text-blue-700">Districts of ${state.state}</h2>`;
+        const grid = document.getElementById('districtInfoCards');
+        grid.innerHTML = '';
+        stateDistricts.forEach(d => {
+            const col = document.createElement('div');
+            col.className = 'col';
+            const link = document.createElement('a');
+            link.href = `district.html?name=${encodeURIComponent(d.district)}`;
+            link.className = 'card bg-blue-100 rounded-lg shadow p-3 text-center text-blue-700 fw-bold';
+            link.textContent = d.district;
+            col.appendChild(link);
+            grid.appendChild(col);
+        });
+    });
+  }
+}
+
+function renderDistrictInfo(d) {
     document.title = `${d.district} | Indian Districts`;
     document.getElementById('districtHeader').innerHTML = `
       <h2 class="fw-bold text-blue-700">${d.district}</h2>
@@ -162,7 +197,6 @@ if (location.pathname.endsWith('district.html')) {
       "area": d.area,
       "address": d.headquarters
     }, null, 2);
-  });
 }
 
 // --- statistics.html logic ---
@@ -176,7 +210,10 @@ if (document.getElementById('statePopChart')) {
     // Calculate statistics
     const districtsByState = {};
     districts.districts.forEach(d => {
-      districtsByState[d.state] = (districtsByState[d.state]||[]).concat(d);
+        if (!districtsByState[d.state]) {
+            districtsByState[d.state] = [];
+        }
+        districtsByState[d.state].push(d);
     });
 
     // Total Districts
